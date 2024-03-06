@@ -11,5 +11,7 @@ services:
     restart: always
     ports:
       - ${API_PORT:-8080}:8080
+    volumes:
+      - .src/:/build/src:rw
     extra_hosts:
       - host.docker.internal:host-gateway
