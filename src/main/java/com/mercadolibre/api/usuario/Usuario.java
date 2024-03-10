@@ -10,7 +10,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "numero_cliente")
-    private Integer numeroCliente;
+    private long numeroCliente;
 
     @Column(name = "correo_electronico", unique = true, nullable = false)
     private String correoElectronico;
@@ -24,7 +24,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Integer numeroCliente, String correoElectronico, String telefono, String contrasenia) {
+    public Usuario(long numeroCliente, String correoElectronico, String telefono, String contrasenia) {
         this.numeroCliente = numeroCliente;
         this.correoElectronico = correoElectronico;
         this.telefono = telefono;

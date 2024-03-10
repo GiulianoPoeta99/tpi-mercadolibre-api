@@ -10,7 +10,7 @@ import java.util.Date;
 public class Empresa {
     @Id
     @Column(name = "usuario")
-    private Integer usuario;
+    private long usuario;
 
     @Column(name = "cuit", unique = true, nullable = false)
     private String cuit;
@@ -24,7 +24,7 @@ public class Empresa {
     public Empresa() {
     }
 
-    public Empresa(Integer usuario, String cuit, String nombreFantasia, Date fechaCreacion) {
+    public Empresa(long usuario, String cuit, String nombreFantasia, Date fechaCreacion) {
         this.usuario = usuario;
         this.cuit = cuit;
         this.nombreFantasia = nombreFantasia;
